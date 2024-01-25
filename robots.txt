@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /private-section/
+Allow: /public-section/
+Sitemap: https://kiafadestapaciones.netlify.app/sitemap.xml
