@@ -420,7 +420,7 @@ nav ul li a {
   .social-media {
     display: inline-block;
     position:absolute;
-    top:550%;
+    top:520%;
     left:50%;
     -ms-transform:translate(-50%,-50%);
     -webkit-transform:translate(-50%,-50%);
