@@ -4,18 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kiafadestapaciones</title>
+    <meta name="description" content="Somos Kiafa Destapaciones, un servicio de destapaciones con casi 15 años de experiencia en CABA y ciertas partes de GBA. Realizamos destapaciones y video inspecciones con profesionalismo. ¡Contáctanos para solucionar tus problemas de cañerías de manera eficiente y confiable!">
+    <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="icon" href="./logo.png" type="image/png">
+    <link rel="icon" href="./logo.webp" type="image/webp">
+    <link rel="preload" href="./BG.webp" as="image">
 </head>
 <body>
     <div class="whatsapp-icon-container">
-		<a href="https://wa.me/541154298197" target="_BLANK" class="whatsapp-overlay"> <i class="fa-brands fa-whatsapp whatsapp-icon"></i></a>
+		<a href="https://wa.me/541154298197" target="_BLANK" class="whatsapp-overlay" id="Whatsapp"> <i class="fa-brands fa-whatsapp whatsapp-icon" alt="Whatsapp"></i></a>
 	</div>
     <nav class="navbar">
         <div class="logo">
-          <img src="./logo.png" alt="Kiafadestapaciones logo">
+          <img src="./logo.webp" alt="Kiafadestapaciones logo">
         </div>
     <ul class="links">
         <li><a href="#main" id="link-main">Inicio</a></li>
@@ -41,11 +44,11 @@
     </div>
     <div class="text">
         <div class="txt-bg"></div>
-        <h3 class="title" data-aos="zoom-down" data-aos-easing="linear" data-aos-anchor-placement="center-bottom" data-aos-mirror="true">Sobre Nosotros</h3>
-        <div class="parent">
+        <h2 class="title" data-aos="zoom-down" data-aos-easing="linear" data-aos-anchor-placement="center-bottom" data-aos-mirror="true">Sobre Nosotros</h2>
+        <div class="parent lazyload">
             <div class="cont cont1" id="about-us" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="500" data-aos-anchor-placement="center-bottom" data-aos-mirror="true">
                 <div class="content-img"> 
-                    <i class="fa-solid fa-map fa-fw TXT-IMG"></i>
+                    <i class="fa-solid fa-map fa-fw TXT-IMG" loading="lazy"></i>
                 </div>
                 <div class="content-container">
                     <p><b>Brindamos servicios de destapaciones, limpieza de cañerías y video inspecciones a lo largo de  Capital Federal y ciertas zonas de GBA. </b></p>
@@ -53,7 +56,7 @@
             </div>
             <div class="cont cont2" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="500" data-aos-anchor-placement="center-bottom" data-aos-mirror="true">
                 <div class="content-img">
-                    <i class="fa-solid fa-gears fa-fw TXT-IMG"></i>
+                    <i class="fa-solid fa-gears fa-fw TXT-IMG" loading="lazy"></i>
                 </div>
                 <div class="content-container">
                     <p><b>Trabajamos con una máquina eléctrica y resortes complementados con diferentes elementos para desobstruir cañerías y devolverles su diámetro original.</b></p>
@@ -61,7 +64,7 @@
             </div>
             <div class="cont cont3" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="500" data-aos-anchor-placement="center-bottom" data-aos-mirror="true">
                 <div class="content-img">
-                    <i class="fa-solid fa-clock fa-fw TXT-IMG"></i>
+                    <i class="fa-solid fa-clock fa-fw TXT-IMG" loading="lazy"></i>
                 </div>
                 <div class="content-container">
                     <p><b>Prestamos nuestros servicios las 24hs del día. Podrán contactarnos mediante nuestro Whatsapp o Número de Teléfono <br>&lpar;+54 115 429 8197&rpar;</b></p>
@@ -69,7 +72,7 @@
             </div>
             <div class="cont cont4" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="500" data-aos-anchor-placement="center-bottom" data-aos-mirror="true">
                 <div class="content-img">
-                    <i class="fa-solid fa-circle-check fa-fw TXT-IMG"></i>
+                    <i class="fa-solid fa-circle-check fa-fw TXT-IMG" loading="lazy"></i>
                 </div>
                 <div class="content-container">
                     <p><b>Gracias a nuestros casi 15 años de experiencia y nuestro material de trabajo podemos desobstruir cañerías con raíces, grasa, papel entre muchas más cosas.</b></p>
@@ -83,7 +86,7 @@
             <div class="card" onclick="toggleCard(this)" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500" data-aos-anchor-placement="center-bottom" data-aos-mirror="true">
                 <div class="face face1">
                     <div class="content">
-                        <h3 class="card-title">¿Qué servicios brindamos?</h3>
+                        <h4 class="card-title">¿Qué servicios brindamos?</h4>
                     </div>
                 </div>
                 <div class="face face2">
@@ -96,7 +99,7 @@
             <div class="card" onclick="toggleCard(this)" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500" data-aos-anchor-placement="center-bottom" data-aos-mirror="true">
                 <div class="face face1">
                     <div class="content">
-                        <h3 class="card-title">¿A quiénes prestamos servicios?</h3>
+                        <h4 class="card-title">¿A quiénes prestamos servicios?</h4>
                     </div>
                 </div>
                 <div class="face face2">
@@ -109,7 +112,7 @@
             <div class="card" onclick="toggleCard(this)" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500" data-aos-anchor-placement="center-bottom" data-aos-mirror="true">
                 <div class="face face1">
                     <div class="content">
-                        <h3 class="card-title">¿Hacemos servicios de video inspección?</h3>
+                        <h4 class="card-title">¿Hacemos servicios de video inspección?</h4>
                     </div>
                 </div>
                 <div class="face face2">
@@ -150,19 +153,19 @@
   </li>
 </ul>
     </div>
-    <div class="contact" id="contact"> 
+    <div class="contact lazyload" id="contact"> 
         <div class="contact-txt">
             <h3 class="contact-title">¡Contactanos!</h3>
             <p>Podés solicitar el servicio que necesites a tráves de nuestro Whatsapp.</p>
         </div>
         <div class="wpp-logo">
             <a href="https://wa.me/+541154298197" target="_blank">
-                <img src="./wpp-logo.png" alt="">
+                <img src="./wpp-logo.webp" alt="Whatsapp Logo" loading="lazy">
             </a>
         </div>
         <div class="wpp-number">
             <p>¡Contactanos por nuestro Número de Teléfono!</p>
-            <h3>11 5429-8197</h3>
+            <p class="number"><b>11 5429-8197</b></p>
         </div>
         <div class="social-media">
         <a href="https://wa.me/541154298197" target="_blank" class="icon">
@@ -186,10 +189,13 @@
         
         </div>
     </div>
-    <div class="footer"></div>
+    <footer class="footer"> 
+      <p>Copyright © 2024 Kiafadestapaciones | <b>Diseño Web</b> Fabrizio Guzmán </p>
+    </footer>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+    <script src="lazysizes.min.js" async=""></script>
     <script>
         const rellax = new Rellax(".rellax");
     </script>
@@ -197,7 +203,7 @@
       AOS.init();
     </script>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", function () {
     var navbar = document.querySelector(".navbar");
     
     window.addEventListener("scroll", function () {
@@ -211,7 +217,7 @@
     });
 });
     </script>
-    <script>
+    <script async>
         function scrollToContact() {
           const contactSection = document.getElementById('contact');
           
@@ -273,16 +279,14 @@
       });
     });
   });
-      </script>
-    <script>
+    </script>
+    <script async>
   $(function() {
   var Accordion = function(el, multiple) {
     this.el = el || {};
     this.multiple = multiple || false;
 
-    // Variables privadas
     var links = this.el.find('.link');
-    // Evento
     links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
   }
 
@@ -302,7 +306,7 @@
   var accordion = new Accordion($('#accordion'), false);
 });
     </script>
-    <script>
+    <script async>
 function toggleCard(card) {
   const allCards = document.querySelectorAll('.card');
   const content = card.querySelector('.content'); // Find the .content within the clicked card
