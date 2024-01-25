@@ -1,4 +1,3 @@
-
 *::before,
 *::after {
   box-sizing: border-box;
@@ -63,6 +62,7 @@ nav .logo {
 
 nav .logo img {
     width: 190px;
+    height: 95px;
 }
 
 nav ul {
@@ -78,7 +78,6 @@ nav ul {
 
 nav ul li a {
     text-decoration: none;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 22px;
     font-weight: 900;
     color: #ccc;
@@ -86,14 +85,12 @@ nav ul li a {
     padding: 8px 0;
     transition: all 0.5s ease;
     border-bottom: 3px solid #cccccc00;
-
-    
 }
 
 .navbar ul li a.active,
 .navbar ul li a:hover {
-  color: #088A93;
-  border-bottom: 3px solid #088A93;
+  color: #fff;
+  border-bottom: 3px solid #fff;
 }
 
 .main {
@@ -111,7 +108,7 @@ nav ul li a {
     position: absolute;
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(180deg,#2a2a2a40 0%,#10175c 100%), url("./BG.jpg");
+    background-image: linear-gradient(180deg,#2a2a2a40 0%,#10175c 100%), url("./BG.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -310,7 +307,6 @@ nav ul li a {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: consolas;
   }
 
   .services-title {
@@ -362,7 +358,7 @@ nav ul li a {
   .container .card .face.face1 .content img{
   max-width: 100px;
   }
-  .container .card .face.face1 .content h3{
+  .container .card .face.face1 .content h4{
   margin: 10px 0 0;
   padding: 0;
   color: #fff;
@@ -402,7 +398,7 @@ nav ul li a {
 
   .container .card .face.face2 .content a:hover {
     scale: 1.1;
-    background-color: #2a2a2a;
+    background-color: #10175c;
     color: #FFF;
     border: 1px solid #FFF;
     transition: all 0.3s ease-in;
@@ -455,7 +451,6 @@ nav ul li a {
   .contact .social-media span {
     color:#2a2a2a;
     position:absolute;
-    font-family:sans-serif;
     bottom:0;
     left:-25px;
     right:-25px;
@@ -598,7 +593,7 @@ nav ul li a {
   }
 
   .contact {
-    background-image: linear-gradient(180deg,#2a2a2a40 0%,#000 100%) ,url(./Contact-1.jpg);
+    background-image: linear-gradient(180deg,#2a2a2a40 0%,#000 100%) ,url(./Contact-1.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -632,6 +627,7 @@ nav ul li a {
 
   .wpp-logo img {
     width: 100px;
+    height: 100px;
   }
   .wpp-number {
     display: flex;
@@ -648,6 +644,18 @@ nav ul li a {
     padding-top: 10px;
   }
 
-  .wpp-number h3 {
+  .wpp-number .number {
     margin-bottom: 10px;
+  }
+
+  .footer {
+    background-color: #18181A;
+    color: #ccc;
+    padding: 10px;
+  }
+  
+  .footer p{
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7em;
   }
