@@ -415,13 +415,13 @@ nav ul li a {
 
   .social-media {
     display: inline-block;
-    position:absolute;
-    top:520%;
+    position:relative;
     left:50%;
     -ms-transform:translate(-50%,-50%);
     -webkit-transform:translate(-50%,-50%);
     transform:translate(-50%,-50%);
     text-align: center;
+    padding-top: 160px;
   }
   
   .icon {
