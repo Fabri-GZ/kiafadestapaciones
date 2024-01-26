@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kiafadestapaciones</title>
+    <title>Destapaciones-Kiafa</title>
     <meta name="description" content="Somos Kiafa Destapaciones, un servicio de destapaciones con casi 15 años de experiencia en CABA y ciertas partes de GBA. Realizamos destapaciones y video inspecciones con profesionalismo. ¡Contáctanos para solucionar tus problemas de cañerías de manera eficiente y confiable!">
     <meta name="robots" content="index, follow">
     <link rel="preload" href="./BG.webp" as="image">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="icon" href="./logo.png" type="image/png">
-
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="icon" href="./logo.webp" type="image/webp">
 </head>
 <body>
     <div class="whatsapp-icon-container">
@@ -197,9 +195,12 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
     <script src="lazysizes.min.js" async></script>
+    <script src="https://kit.fontawesome.com/ab14f4ce9c.js" crossorigin="anonymous" async></script>
     <script>
-        const rellax = new Rellax(".rellax");
-    </script>
+      window.addEventListener('load', function() {
+          const rellax = new Rellax(".rellax");
+      });
+  </script>
     <script>
       AOS.init();
     </script>
@@ -228,7 +229,6 @@
         }
     </script>
     <script>
-   
   document.addEventListener("DOMContentLoaded", function () {
     const links = document.querySelectorAll('.navbar ul li a');
 
@@ -310,13 +310,15 @@
     <script async>
 function toggleCard(card) {
   const allCards = document.querySelectorAll('.card');
-  const content = card.querySelector('.content');
+  const content = card.querySelector('.content'); // Find the .content within the clicked card
 
   if (card.classList.contains('expanded')) {
+    // If the card is already expanded, close it
     card.classList.remove('expanded');
     content.style.opacity = "0.5";
     document.removeEventListener('click', closeCardOutsideClick);
   } else {
+    // If the card is not expanded, close all other cards and expand this one
     allCards.forEach((c) => {
       if (c !== card && c.classList.contains('expanded')) {
         c.classList.remove('expanded');
