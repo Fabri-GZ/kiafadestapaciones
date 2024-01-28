@@ -310,15 +310,13 @@
     <script async>
 function toggleCard(card) {
   const allCards = document.querySelectorAll('.card');
-  const content = card.querySelector('.content'); // Find the .content within the clicked card
+  const content = card.querySelector('.content'); 
 
   if (card.classList.contains('expanded')) {
-    // If the card is already expanded, close it
     card.classList.remove('expanded');
     content.style.opacity = "0.5";
     document.removeEventListener('click', closeCardOutsideClick);
   } else {
-    // If the card is not expanded, close all other cards and expand this one
     allCards.forEach((c) => {
       if (c !== card && c.classList.contains('expanded')) {
         c.classList.remove('expanded');
