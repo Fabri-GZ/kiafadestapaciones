@@ -8,8 +8,9 @@
     <meta name="robots" content="index, follow">
     <link rel="preload" href="./BG.webp" as="image">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="icon" href="./logo.webp" type="image/webp">
+    <link rel="preconnect" href="https://ka-f.fontawesome.com">
+    <link rel="icon" href="./logo.webp" type="image/webp"> 
+    <link rel="stylesheet" href="./aos.css">
 </head>
 <body>
     <div class="whatsapp-icon-container">
@@ -43,7 +44,7 @@
     </div>
     <div class="text">
         <div class="txt-bg"></div>
-        <h2 class="title" data-aos="zoom-down" data-aos-easing="linear" data-aos-anchor-placement="center-bottom" data-aos-mirror="true">Sobre Nosotros</h2>
+        <h2 class="title" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500" data-aos-anchor-placement="center-bottom" data-aos-mirror="true">Sobre Nosotros</h2>
         <div class="parent lazyload">
             <div class="cont cont1" id="about-us" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="500" data-aos-anchor-placement="center-bottom" data-aos-mirror="true">
                 <div class="content-img"> 
@@ -79,7 +80,7 @@
             </div>
         </div>
     </div>
-       <div class="services" id="services">
+       <div class="services lazyload" id="services">
         <h3 class="services-title"><b>SERVICIOS</b></h3> 
         <div class="container">
             <div class="card" onclick="toggleCard(this)" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500" data-aos-anchor-placement="center-bottom" data-aos-mirror="true">
@@ -123,7 +124,7 @@
             </div>
         </div>
     </div>
-    <div class="faq" id="faq">
+    <div class="faq lazyload" id="faq">
         <h3> <b>PREGUNTAS FRECUENTES</b></h3>
 <ul id="accordion" class="accordion">
   <li>
@@ -185,16 +186,17 @@
         <a href="mailto:kiafadestapaciones@hotmail.com" class="icon" target="_blank">
             <i class="fa-regular fa-envelope"></i>
             <span>Gmail</span></a>
+        
         </div>
     </div>
     <footer class="footer"> 
       <p>Copyright © 2024 Kiafadestapaciones | <b>Diseño Web</b> Fabrizio Guzmán </p>
     </footer>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js" async></script>
     <script src="lazysizes.min.js" async></script>
     <script src="https://kit.fontawesome.com/ab14f4ce9c.js" crossorigin="anonymous" async></script>
+    <script src="./aos.js"></script>
     <script>
       window.addEventListener('load', function() {
           const rellax = new Rellax(".rellax");
