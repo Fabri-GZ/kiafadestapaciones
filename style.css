@@ -43,6 +43,7 @@ body {
   scale: 1.1;
   transition: all 0.3s ease;
 }
+
 nav {
     background-color: #18181A;
     backdrop-filter: blur(18px) saturate(180%);
@@ -95,7 +96,7 @@ nav ul li a {
 
 .main {
   position: relative;
-    height: 100vh;
+    height: 650px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -107,7 +108,7 @@ nav ul li a {
   .main-bg {
     position: absolute;
     width: 100%;
-    height: 100vh;
+    height: 650px;
     background-image: linear-gradient(180deg,#2a2a2a40 0%,#10175c 100%), url("./BG.webp");
     background-size: cover;
     background-position: center;
@@ -245,7 +246,8 @@ nav ul li a {
     justify-content: center;
     color: #10175c;
     margin-top: 0;
-    padding-top: 30px;
+    margin-bottom: 0;
+    padding-top: 50px;
     z-index: 1002;
   }
 
@@ -597,7 +599,7 @@ nav ul li a {
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    height: 96vh;
+    height: 625px;
   }
   .contact-txt {
     display: flex;
