@@ -597,6 +597,18 @@ body {
         margin-top: 60px;
     }
 
+    .placeholder{
+        width: 100%;
+        display: block;
+        opacity: 1;
+    }
+
+    .services-4 {
+        display: none;
+        width: 100%;
+        height: auto;
+    }
+
     .play-bttn {
         position: absolute;
         top: 50%;
@@ -614,6 +626,7 @@ body {
         position: relative;
         display: inline-block;
         width: 100%;
+        height: 100%;
       }
 
 
@@ -870,7 +883,7 @@ body {
     line-height: 1.7em;
   }
 
-  @media (max-width: 1020px) {
+  @media (max-width: 800px) {
     #services-1, #services-3 {
       flex-direction: column;
     }
@@ -883,7 +896,9 @@ body {
         margin-top: 40px;
     }
 
-    .img-2, .img-4 {
-        align-self: flex-end;
+    .img-1,.img-2, .img-3, .img-4 {
+        align-self: center;
     }
+
+
   }
