@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Destapaciones Kiafa</title>
     <meta name="description" content="Somos Kiafa Destapaciones, un servicio de destapaciones con casi 15 años de experiencia en CABA y ciertas partes de GBA. Realizamos destapaciones y video inspecciones con profesionalismo. ¡Contáctanos para solucionar tus problemas de cañerías de manera eficiente y confiable!">
     <meta name="keywords" content="destapaciones, plomería, destapaciones de cañerías,destapación de cañerías, destapación de cloacas, destapaciones de urgencia, destapaciones con máquina, servicio de destapaciones, destapaciones pluviales, destapar cañerías, servicios de plomería, limpieza de cañerías, cañerías obstruidas, destapar desagües, video inspecciones, Kiafa Destapaciones, Destapaciones Kiafa">
     <meta name="robots" content="index, follow">
@@ -32,25 +32,27 @@
           <div class="collapse navbar-collapse links" id="navbarNavDropdown">
             <ul class="navbar-nav" id="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="#main">Inicio</a>
+                <a class="nav-link" id="nav-link" href="#main">Inicio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#about-us">Sobre Nosotros</a>
+                <a class="nav-link" id="nav-link" href="#about-us">Sobre Nosotros</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#services" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Servicios
                 </a>
                 <ul class="dropdown-menu">
-                  <li class="drop-li-1"><a class="dropdown-item drop-item-1" href="#" id="dropdown-item">Información Sobre nuestro trabajo</a></li>
-                  <li class="drop-li-2"><a class="dropdown-item drop-item-2" href="#" id="dropdown-item">Servicios de video inspección</a></li>
+                  <li class="drop-li-1"><a class="dropdown-item drop-item-1 text-center" href="#services-1" id="nav-link">Servicios que realizamos</a></li>
+                  <li class="drop-li-2"><a class="dropdown-item drop-item-2 text-center" href="#services-2" id="nav-link">Nuestros clientes</a></li>
+                  <li class="drop-li-3"><a class="dropdown-item drop-item-3 text-center" href="#services-3" id="nav-link">Videoinspecciones</a></li>
+                  <li class="drop-li-4"><a class="dropdown-item drop-item-4 text-center" href="#services-4" id="nav-link">Cómo funciona la videoinspección</a></li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#faq">FAQ</a>
+                <a class="nav-link" id="nav-link" href="#faq">FAQ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#contact">Contacto</a>
+                <a class="nav-link" id="nav-link" href="#contact">Contacto</a>
               </li>
               
             </ul>
@@ -119,46 +121,57 @@
 
   <div class="services" id="services">
     <h2 class="title services-title" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500" data-aos-once="true">Servicios</h2>
+    
     <div class="row service-card" id="services-1">
-      <div class="col-sm-4 card-1">
-        <div class="card text-bg-dark card-1" >
-          <img src="./Service-Contact-1.webp" class="card-img card-1" alt="Background" style="opacity: 0.5;">
-          <div class="card-img-overlay">
-            <h5 class="card-title">Servicios que realizamos</h5>
-            <p class="card-text">Video inspecciones, destapación de columnas, cloacales, pluviales y ramales internos: cañerías de cocinas, rejillas de lavadero, desagüe de pileta, cocina, lavamanos, rejillas en cocinas, etc.</p>
-          </div>
-        </div>
+      <div class="col-4 service-img img-1">
+        <img src="./service-1.webp" alt="" class="img-fluid" style="opacity: 0.8; height: 100%;">
       </div>
-      <div class="card text-bg-dark col-sm-4 card-2">
-        <div class="card-body">
-          <h5 class="card-title">Nuestros clientes</h5>
-          <p class="card-text">Destapación de columnas, pluviales, ramales internos y videoinspecciones en hogares, edificios, empresas, oficinas, fábricas, establecimientos y más.</p>
-            <a href="#" class="btn btn-primary text-center">Contacto</a>
-        </div>
-      </div> 
-          </div>
-        </div>
+      <div class="col-6 service-container">
+        <p class="service-header header-1"> <b>Servicios que realizamos </b><br>
+        <p class="service-text">Video inspecciones, destapación de columnas, cloacales, pluviales y ramales internos: cañerías de cocinas, rejillas de lavadero, desagüe de pileta, cocina, lavamanos, rejillas en cocinas, etc.</p>
+        <button type="button" class="btn btn-outline-primary" onclick="scrollToContact()">Contacto</button>
       </div>
-      </div>
-      <div class="row service-card" id="services-2">
-        <div class="col-sm-4 card-3">
-          <div class="card text-bg-dark card-3" >
-            <img src="./Service-3.webp" class="card-img card-3" alt="Background" style="opacity: 0.5;">
-            <div class="card-img-overlay">
-              <h5 class="card-title">Videoinspecciones</h5>
-              <p class="card-text">Brindamos servicios de videoinspección que permiten evaluar el estado real del interior de las cañerías mediante una serie de videos enviados por mail.</p>
-            </div>
-          </div>
-        </div>
+      <div class="col-2 blank-space"></div>
+    </div>
 
-        <div class="card text-bg-dark col-sm-4 card-2">
-          <div class="card-body">
-            <h5 class="card-title">Videoinspecciones</h5>
-              <p class="card-text">Brindamos servicios de videoinspección que permiten evaluar el estado real del interior de las cañerías mediante una serie de videos enviados por mail.</p>
-              <a href="#" class="btn btn-primary text-center">Contacto</a>
-          </div>
+    <div class="row service-card" id="services-2">
+      <div class="col-2 blank-space"></div>
+      <div class="col-6 service-container">
+        <p class="service-header"> <b>Nuestros clientes</b><br>
+        <p class="service-text">Destapación de columnas, pluviales, ramales internos y videoinspecciones en hogares, edificios, empresas, oficinas, fábricas, establecimientos y más.</p>
+        <button type="button" class="btn btn-outline-primary" onclick="scrollToContact()">Contacto</button>
+      </div>
+      <div class="col-4 service-img img-2">
+        <img src="./Service-2.webp" alt="" class="img-fluid" style="opacity: 0.8; height: 100%;">
+      </div>
+    </div>
+
+    <div class="row service-card" id="services-3">
+      <div class="col-4 service-img img-3">
+        <img src="./Service-3.webp" alt="" class="img-fluid" style="opacity: 0.8; height: 100%;">
+      </div>
+      <div class="col-6 service-container">
+        <p class="service-header"> <b>Videoinspecciones</b><br>
+        <p class="service-text">Brindamos servicios de videoinspección que permiten evaluar el estado real del interior de las cañerías mediante una serie de videos enviados por mail.</p>
+        <button type="button" class="btn btn-outline-primary" onclick="scrollToContact()">Contacto</button>
+      </div>
+      <div class="col-2 blank-space"></div>
+    </div>
+
+    <div class="row service-card" id="services-4">
+      <div class="col-2 blank-space"></div>
+      <div class="col-6 service-container">
+        <p class="service-header"> <b>Cómo funciona la videoinspección</b><br>
+        <p class="service-text">Destapación de columnas, pluviales, ramales internos y videoinspecciones en hogares, edificios, empresas, oficinas, fábricas, establecimientos y más.</p>
+        <button type="button" class="btn btn-outline-primary" onclick="scrollToContact()">Contacto</button>
+      </div>
+      <div class="col-4 service-img img-4">
+        <div class="video-container">
+        <video src="./Services-4.mp4" class="img-fluid services-4" style="width: 100%;"></video>
+        <div class="play-bttn" id="play-bttn">&#9658;</div>
         </div>
-      </div> 
+      </div>
+    </div>
   </div>
 
   <div class="faq lazyload" id="faq">
@@ -255,12 +268,12 @@
       </script>
 
 <script>
-  var hamburger = document.querySelector(".hamburger");
+  let hamburger = document.querySelector(".hamburger");
+  let navItem = document.querySelectorAll(".nav-item");
 
   hamburger.addEventListener("click", function() {
 
       hamburger.classList.toggle("is-active");
-      //aaa
   });
 </script>
 
@@ -407,6 +420,81 @@
   
     var accordion = new Accordion($("#accordion"), false);
   });
+  </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var navbarToggler = document.getElementById("navbar-toggler");
+    var navLinks = document.querySelectorAll("#nav-link");
+    var dropLinks = document.querySelectorAll(".dropdown-item");
+
+    navLinks.forEach(function (link) {
+      link.addEventListener("click", function () {
+        var bsCollapse = new bootstrap.Collapse(document.getElementById("navbarNavDropdown"), {
+          toggle: false
+        });
+        bsCollapse.hide();
+      });
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+  var video = document.querySelector(".services-4");
+  var playButton = document.getElementById("play-bttn");
+
+    playButton.addEventListener("click", function () {
+      if (video.requestFullscreen) {
+        video.requestFullscreen();}
+
+      video.play();
+      });
+      function onFullScreenChange() {
+    if (document.fullscreenElement) {
+      video.controls = true
+    } else {
+      video.controls = false;
+      video.pause();
+    }
+  }
+
+  document.addEventListener("fullscreenchange", onFullScreenChange);
+    })
+
+  function scrollToContact() {
+    document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+  }
+
+  function adjustServiceLayout() {
+  let deviceWidth = window.innerWidth;
+  let serviceImg = document.querySelectorAll('.service-img');
+  let serviceContainer = document.querySelectorAll('.service-container');
+
+  if (deviceWidth < 1021) {
+    serviceImg.forEach(function(image) {
+      image.classList.remove('col-4');
+      image.classList.add('col-6');
+    });
+
+    serviceContainer.forEach(function(container) {
+      container.classList.remove('col-6');
+      container.classList.add('col-12');
+    });
+  } else {
+    serviceImg.forEach(function(image) {
+      image.classList.remove('col-6');
+      image.classList.add('col-4');
+    });
+
+    serviceContainer.forEach(function(container) {
+      container.classList.remove('col-12');
+      container.classList.add('col-6');
+    });
+  }
+}
+adjustServiceLayout();
+
+window.addEventListener('resize', adjustServiceLayout);
+
   </script>
 </body>
 </html>
