@@ -124,7 +124,7 @@
     
     <div class="row service-card" id="services-1">
       <div class="col-4 service-img img-1">
-        <img src="./service-1.webp" alt="" class="img-fluid" style="opacity: 0.8; height: 100%;">
+        <img src="./service-1.webp" alt="" class="img-fluid" style="height: 100%;">
       </div>
       <div class="col-6 service-container">
         <p class="service-header header-1"> <b>Servicios que realizamos </b><br>
@@ -142,13 +142,13 @@
         <button type="button" class="btn btn-outline-primary" onclick="scrollToContact()">Contacto</button>
       </div>
       <div class="col-4 service-img img-2">
-        <img src="./Service-2.webp" alt="" class="img-fluid" style="opacity: 0.8; height: 100%;">
+        <img src="./Service-2.webp" alt="" class="img-fluid" style="height: 100%;">
       </div>
     </div>
 
     <div class="row service-card" id="services-3">
       <div class="col-4 service-img img-3">
-        <img src="./Service-3.webp" alt="" class="img-fluid" style="opacity: 0.8; height: 100%;">
+        <img src="./Service-3.webp" alt="" class="img-fluid" style="height: 100%;">
       </div>
       <div class="col-6 service-container">
         <p class="service-header"> <b>Videoinspecciones</b><br>
@@ -167,8 +167,9 @@
       </div>
       <div class="col-4 service-img img-4">
         <div class="video-container">
-        <video src="./Services-4.mp4" class="img-fluid services-4" style="width: 100%;"></video>
+        <img src="./Contact-1.webp" alt="" class="img-fluid placeholder" style="height: 100%;">
         <div class="play-bttn" id="play-bttn">&#9658;</div>
+        <video src="./Services-4.mp4" class="img-fluid services-4" style="width: 100%;"></video>
         </div>
       </div>
     </div>
@@ -267,18 +268,29 @@
         AOS.init();
       </script>
 
-<script>
+<script hamburger>
+  document.addEventListener("DOMContentLoaded", function() {
   let hamburger = document.querySelector(".hamburger");
-  let navItem = document.querySelectorAll(".nav-item");
-
-  hamburger.addEventListener("click", function() {
-
-      hamburger.classList.toggle("is-active");
+  
+  function toggleHamburger() {
+    hamburger.classList.toggle("is-active");
+    document.querySelector(".navbar-collapse").classList.toggle("show");
+  }
+  
+  hamburger.addEventListener("click", toggleHamburger);
+  let navLinks = document.querySelectorAll("#nav-link");
+  
+  navLinks.forEach(function(link) {
+    link.addEventListener("click", function() {
+      if (hamburger.classList.contains("is-active")) {
+        toggleHamburger();
+      }
+    });
   });
+});
 </script>
 
-
-<script>
+<script navbar-colors>
    document.addEventListener("DOMContentLoaded", function () {
   let header = document.querySelector("#navbar");
   let dropdownItem = document.querySelectorAll(".dropdown-item");
@@ -317,16 +329,26 @@
   NewBgColor();
 });
 </script>
-      <script async>
-          function scrollToContact() {
-            let contactSection = document.getElementById("contact");
-            
-            if (contactSection) {
-              contactSection.scrollIntoView({ behavior: "smooth" });
-            }
-          }
-     
-    document.addEventListener("DOMContentLoaded", function () {
+
+<script collapse-navbar>
+  document.addEventListener("DOMContentLoaded", function () {
+    var navbarToggler = document.getElementById("navbar-toggler");
+    var navLinks = document.querySelectorAll("#nav-link");
+    var dropLinks = document.querySelectorAll(".dropdown-item");
+
+    navLinks.forEach(function (link) {
+      link.addEventListener("click", function () {
+        var bsCollapse = new bootstrap.Collapse(document.getElementById("navbarNavDropdown"), {
+          toggle: false
+        });
+        bsCollapse.hide();
+      });
+    });
+  });
+  </script>
+
+  <script navbar-links>
+ document.addEventListener("DOMContentLoaded", function () {
       let links = document.querySelectorAll(".navbar ul li a");
   
       links.forEach(link => {
@@ -377,26 +399,46 @@
         });
       });
     });
-  
-    document.addEventListener("DOMContentLoaded", function () {
-      document.querySelectorAll("a[href^='#']").forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-  
-          let targetElement = document.querySelector(this.getAttribute("href"));
-          let offset = targetElement.getBoundingClientRect().top + window.scrollY;
-          let centerOffset = offset - (window.innerHeight - targetElement.clientHeight) / 2;
-  
-          window.scrollTo({
-            top: centerOffset,
-            behavior: "smooth"
-          });
-        });
+  </script>
+
+  <script service-video>
+  document.addEventListener("DOMContentLoaded", function () {
+  var video = document.querySelector(".services-4");
+  var playButton = document.getElementById("play-bttn");
+  var placeholder = document.querySelector(".placeholder");
+
+    playButton.addEventListener("click", function () {
+      placeholder.style.display = "none";
+      video.style.display = "block"
+      
+      if (video.requestFullscreen) {
+        video.requestFullscreen();}
+
+      video.play();
       });
-    });
-      </script>
-      <script async>
-    $(function() {
+      function onFullScreenChange() {
+    if (document.fullscreenElement) {
+      video.controls = true
+    } else {
+      video.controls = false;
+      video.pause();
+      video.style.display = "none";
+      placeholder.style.display = "block"
+    }
+  }
+
+  document.addEventListener("fullscreenchange", onFullScreenChange);
+    })
+
+  function scrollToContact() {
+    document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+  }
+
+  </script>
+
+<script accordion>
+  
+  $(function() {
     var Accordion = function(el, multiple) {
       this.el = el || {};
       this.multiple = multiple || false;
@@ -420,81 +462,40 @@
   
     var accordion = new Accordion($("#accordion"), false);
   });
-  </script>
+  
+</script>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    var navbarToggler = document.getElementById("navbar-toggler");
-    var navLinks = document.querySelectorAll("#nav-link");
-    var dropLinks = document.querySelectorAll(".dropdown-item");
-
-    navLinks.forEach(function (link) {
-      link.addEventListener("click", function () {
-        var bsCollapse = new bootstrap.Collapse(document.getElementById("navbarNavDropdown"), {
-          toggle: false
-        });
-        bsCollapse.hide();
-      });
-    });
-  });
-
-  document.addEventListener("DOMContentLoaded", function () {
-  var video = document.querySelector(".services-4");
-  var playButton = document.getElementById("play-bttn");
-
-    playButton.addEventListener("click", function () {
-      if (video.requestFullscreen) {
-        video.requestFullscreen();}
-
-      video.play();
-      });
-      function onFullScreenChange() {
-    if (document.fullscreenElement) {
-      video.controls = true
-    } else {
-      video.controls = false;
-      video.pause();
-    }
-  }
-
-  document.addEventListener("fullscreenchange", onFullScreenChange);
-    })
-
-  function scrollToContact() {
-    document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
-  }
-
-  function adjustServiceLayout() {
+  <script service-layout>
+function adjustServiceLayout() {
   let deviceWidth = window.innerWidth;
-  let serviceImg = document.querySelectorAll('.service-img');
-  let serviceContainer = document.querySelectorAll('.service-container');
+  let serviceImg = document.querySelectorAll(".service-img");
+  let serviceContainer = document.querySelectorAll(".service-container");
 
-  if (deviceWidth < 1021) {
+  if (deviceWidth < 800) {
     serviceImg.forEach(function(image) {
-      image.classList.remove('col-4');
-      image.classList.add('col-6');
+      image.classList.remove("col-4");
+      image.classList.add("col-12");
     });
 
     serviceContainer.forEach(function(container) {
-      container.classList.remove('col-6');
-      container.classList.add('col-12');
+      container.classList.remove("col-6");
+      container.classList.add("col-12");
     });
   } else {
     serviceImg.forEach(function(image) {
-      image.classList.remove('col-6');
-      image.classList.add('col-4');
+      image.classList.remove("col-12");
+      image.classList.add("col-4");
     });
 
     serviceContainer.forEach(function(container) {
-      container.classList.remove('col-12');
-      container.classList.add('col-6');
+      container.classList.remove("col-12");
+      container.classList.add("col-6");
     });
   }
 }
 adjustServiceLayout();
 
-window.addEventListener('resize', adjustServiceLayout);
-
+window.addEventListener("resize", adjustServiceLayout);
   </script>
 </body>
 </html>
