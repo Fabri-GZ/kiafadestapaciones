@@ -716,10 +716,17 @@ body.no-scroll {
         }
         
         .submenu {
-            display: none;
             font-size: 20px;
             padding: 0;
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.3s ease-in;
           }
+
+        .accordion li.open .submenu-open {
+          max-height: 300px;
+
+        }
 
         .accordion li.open .submenu li { 
           color: #fff; 
