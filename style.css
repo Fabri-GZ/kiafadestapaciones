@@ -16,6 +16,10 @@ body {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 .whatsapp-icon-container {
   position: fixed;
   bottom: 10px;
@@ -35,14 +39,19 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
+  width: 50px;
+  height: 50px;
   box-sizing: border-box;
 }
 
 .whatsapp-icon-container:hover {
-  scale: 1.1;
+  transform: scale(1.1);
   transition: all 0.3s ease;
+}
+
+.kiafa-logo {
+    width: 100%;
+    height: 100%;
 }
 
 @media (min-width: 991px) {
@@ -51,8 +60,6 @@ body {
         height: 70px;
     }
     .kiafa-logo {
-        width: 180px;
-        height: 60px;
         padding-left: 40px;
     }
     .links{ 
@@ -62,6 +69,7 @@ body {
     .dropdown-item {
         background: #03072A ;
     }
+  
 }
 
 @media (max-width: 991px) {
@@ -70,17 +78,16 @@ body {
         height: 75px;
         font-size: 45px;
     }
-    .kiafa-logo {
-        width: 100px;
-        height: 50px;
-    }
 
     .links {
         padding-right: 0;
     }
 
+    .kiafa-logo {
+        padding-bottom: 15px;
+    }
     .navbar {
-        --bs-navbar-padding-y: 0.3rem;
+        --bs-navbar-padding-y: 0rem;
     }
 
     .navbar-brand {
@@ -95,18 +102,17 @@ body {
         position: fixed;
         top: 100%;
         left: 0;
-        width: 100vw;
+        width: 100%;
         background-color: #03072A;
         height: 0;
         overflow: hidden;
-        transition: height o.3s ease-in;
     }
 
     .navbar-nav {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 100%;
+        height: 100vh;
     }
 
     .navbar-nav .nav-item {
@@ -118,11 +124,12 @@ body {
     }
 
     .dropdown-menu {
-        background: #10175c;
+        background: #03072A;
+        
     }
 
     .links .navbar-nav {
-    background-color: #10175c;
+    background-color: #03072A;
     }
 
     .navbar-nav .nav-link.active {
@@ -130,10 +137,13 @@ body {
     }
 
     .dropdown-item {
-        background: #10175c !important;
+        background: #03072A !important;
+    }
+
+    .container-fluid {
+      padding: 0;
     }
 }
-
 
 .whatsapp-icon-container a {
     text-decoration: none;
@@ -144,7 +154,9 @@ body {
 }
 
 .navbar-collapse.show {
-    height: 100vh;
+  position: relative;
+  height: 100%;
+  width: 100%;    
 }
 
 .navbar {
@@ -162,10 +174,8 @@ body {
 
 #navbar {
     max-width: 100%;
-    height: 70px;
+    height: 90px;
     }
-
-
 
 .links .navbar-nav {
     display: flex;
@@ -175,6 +185,7 @@ body {
     margin: 0;
     padding: 0;
     position: relative;
+    z-index: 2000;
 }
 
 .links ul li a {
@@ -207,6 +218,7 @@ body {
 .dropdown-menu {
     --bs-dropdown-padding-y: 0;
     border-radius: 15px;
+    border: transparent;
 }
 
 .drop-item-1, .drop-li-1 {
@@ -226,13 +238,13 @@ body {
 }
 
 .dropdown-item:hover {
-    background-color: #10175c !important;
+    background-color: #03072A !important;
 }
 
 .navbar-toggler {
     padding: 5px 15px 0 0;
     position: absolute;
-    top: 15px;
+    top: 25px;
     right: 15px;
 }
 .navbar-toggler:focus {
@@ -247,9 +259,9 @@ body {
     --bs-navbar-padding-y:0;
 }
 
-.navbar-nav .nav-link.active {
-    color: #ccc;
-    align-self: center;
+.navbar-nav .nav-link.active, .nav-link.show {
+    color: #ccc !important;
+    text-align: center;
 }
 
 .hamburger {
@@ -358,7 +370,7 @@ body {
   
 .txt-bg {
     width: 100%;
-    height: 90%;
+    height: 60%;
     position: absolute;
     background-color: #fff;
     z-index: 10;
@@ -378,7 +390,7 @@ body {
     font-size: 4vw;
     -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
-    text-shadow: 6px 6px 3px #10175ce6 ;
+    text-shadow: 6px 6px 3px #03072ae6;
     font-weight: 600;
     line-height: 1.4;
 }
@@ -575,11 +587,11 @@ body {
 
     .service-header {
         font-size: 32px;
-        color: #10175c;
+        color: #03072a;
     }
 
     .service-text {
-        color: #2a2a2ab2;
+        color: #18181A;
     }
 
     .btn-outline-primary {
@@ -598,8 +610,10 @@ body {
     }
 
     .placeholder{
-        width: 100%;
-        display: block;
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        cursor: default !important; 
         opacity: 1;
     }
 
@@ -619,10 +633,10 @@ body {
         background-color: #10185c83;
         border-radius: 50%;
         padding: 0.5rem;
-        cursor: pointer;
+        cursor: pointer !important;
       }
     
-      .video-container {
+      .img-container {
         position: relative;
         display: inline-block;
         width: 100%;
@@ -638,7 +652,7 @@ body {
         }
       
         .faq h3 {
-          color: #2a2a2a;
+          color: #18181A;
           font-size: 48px;
           font-weight: 400;
           text-align: center;
@@ -651,9 +665,7 @@ body {
           max-width: 960px;
           padding-left: 0px;
           margin: 30px auto 20px;
-          background: #2a2a2a;
-          -webkit-border-radius: 4px;
-          -moz-border-radius: 4px;
+          background: #18181A;
           border-radius: 4px;
         }
         
@@ -666,9 +678,8 @@ body {
           font-weight: 700;
           border-bottom: 1px solid #ccc;
           position: relative;
-          -webkit-transition: all 0.4s ease;
-          -o-transition: all 0.4s ease;
           transition: all 0.4s ease;
+          transition-delay: 0.1s;   
         }
         
         .accordion li:last-child .link { border-bottom: 0; }
@@ -679,9 +690,8 @@ body {
           left: 12px;
           font-size: 20px;
           color: #ccc;
-          -webkit-transition: all 0.4s ease;
-          -o-transition: all 0.4s ease;
           transition: all 0.4s ease;
+          transition-delay: 0.1s; 
         }
         
         .accordion li i.fa-chevron-down {
@@ -692,37 +702,33 @@ body {
         
         .accordion li.open .link { 
           color: #fff;
-          background-color: #03072A;
-          transition-delay: 0.5s;
+          background-color: #03072a;
           border-bottom: 1px solid #fff;
+          transition: all 0.4s ease;
         }
         
         .accordion li.open i { 
           color: #fff;
-          transition-delay: 0.5s;
         }
         
         .accordion li.open i.fa-chevron-down {
-          -webkit-transform: rotate(180deg);
-          -ms-transform: rotate(180deg);
-          -o-transform: rotate(180deg);
           transform: rotate(180deg);
         }
         
+        .submenu {
+            display: none;
+            font-size: 20px;
+            padding: 0;
+          }
+
         .accordion li.open .submenu li { 
           color: #fff; 
           background-color: #03072A;
-          transition: background 0.5s ease, color 0.5s ease;
-          transition-delay: 0.5s;
           padding-left: 20px;
-          } 
-      
-        .submenu {
-          display: none;
-          background: #2a2a2a;
-          font-size: 20px;
-          padding: 0;
-        }
+          transition: all 0.4s ease;
+          transition-delay: 0.1s;
+          }
+    
         
         .submenu li { border-bottom: 1px solid #03072A; }
         
@@ -730,10 +736,7 @@ body {
           display: block;
           text-decoration: none;
           color: #ccc;
-          padding: 12px;
-          padding-left: 0;
-          -webkit-transition: all 0.25s ease;
-          -o-transition: all 0.25s ease;
+          padding: 12px 0;
           transition: all 0.25s ease;
         }
     
@@ -745,7 +748,7 @@ body {
         }
     
     .contact {
-    background-image: linear-gradient(180deg,#2a2a2a40 0%,#000 100%) ,url(./Contact-1.webp);
+    background-image: linear-gradient(180deg,#2a2a2a40 0%,#18181A 100%) ,url(./Contact-1.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -835,7 +838,7 @@ body {
   }
 
   .contact .social-media span {
-    color:#2a2a2a;
+    color:#18181A;
     position:absolute;
     bottom:0;
     left:-25px;
@@ -896,9 +899,43 @@ body {
         margin-top: 40px;
     }
 
-    .img-1,.img-2, .img-3, .img-4 {
-        align-self: center;
+    .service-container {
+        text-align: center;
+        padding: 0 5px;
     }
+  }
 
+  .img-1, .img-2, .img-3, .img-4 {
+    height: 100%;
+    width: 100%;
+  }
 
+  .video-background {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.8);
+    display: none;
+    z-index: 1000;
+  }
+  .video-container {
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    width: 80%;
+    height: 80%; 
+    max-width: 800px;
+    max-height: 500px; 
+    display: none;
+
+  }
+  
+  .video-container iframe {
+    width: 100%;
+    height: 100%;
   }
