@@ -395,7 +395,6 @@ body.no-scroll {
 }
   
 .leyend h1, .leyend h2 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 4vw;
     -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
