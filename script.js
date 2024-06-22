@@ -124,11 +124,7 @@
       var target = e.currentTarget;
       var next = target.nextElementSibling;
   
-      if (next.style.display === "block") {
-        next.style.display = "none";
-      } else {
-        next.style.display = "block";
-      }
+      next.classList.toggle("submenu-open");
   
       target.parentElement.classList.toggle("open");
   
@@ -136,7 +132,7 @@
         var submenus = el.querySelectorAll(".submenu");
         submenus.forEach(submenu => {
           if (submenu !== next) {
-            submenu.style.display = "none";
+            submenu.classList.remove("submenu-open");
             submenu.parentElement.classList.remove("open");
           }
         });
