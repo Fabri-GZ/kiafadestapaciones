@@ -79,19 +79,28 @@
   document.addEventListener("DOMContentLoaded", function() {
     const playButton = document.getElementById("play-bttn");
     const videoContainer = document.querySelector(".video-container");
-    const video = document.getElementById("video-frame");
     const background = document.querySelector(".video-background");
+    const placeholder = document.getElementById("video-placeholder");
   
+
+    function loadVideo() {
+        placeholder.innerHTML = '<iframe src="https://www.youtube.com/embed/omWMj0IR1lM" frameborder="0" allowfullscreen style=" height: 100%; width: 100%"></iframe>';
+        placeholder.style.width = "100%";
+        placeholder.style.height = "100%";
+      }
+
+      setTimeout(loadVideo, 5000);
+
     playButton.addEventListener("click", function() {
       videoContainer.style.display = "block";
-      video.style.display = "block";
+      placeholder.style.display = "block";
       background.style.display = "block";
     });
   
     document.addEventListener("click", function(event) {
       if (!videoContainer.contains(event.target) && event.target !== playButton) {
         videoContainer.style.display = "none";
-        video.style.display = "none";
+        placeholder.style.display = "none";
         background.style.display = "none";
       }
     });
