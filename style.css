@@ -934,8 +934,3 @@ body.no-scroll {
     display: none;
 
   }
-  
-  .video-container iframe {
-    width: 100%;
-    height: 100%;
-  }
