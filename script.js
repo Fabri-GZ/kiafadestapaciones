@@ -106,6 +106,46 @@
     });
   });
 
+  document.addEventListener("DOMContentLoaded", function() {
+    var Accordion = function(el, multiple) {
+      this.el = el || {};
+      this.multiple = multiple || false;
+  
+      var links = this.el.querySelectorAll(".link");
+      links.forEach(link => {
+        link.addEventListener("click", (e) => {
+          this.dropdown(e);
+        });
+      });
+    };
+  
+    Accordion.prototype.dropdown = function(e) {
+      var el = this.el;
+      var target = e.currentTarget;
+      var next = target.nextElementSibling;
+  
+      if (next.style.display === "block") {
+        next.style.display = "none";
+      } else {
+        next.style.display = "block";
+      }
+  
+      target.parentElement.classList.toggle("open");
+  
+      if (!this.multiple) {
+        var submenus = el.querySelectorAll(".submenu");
+        submenus.forEach(submenu => {
+          if (submenu !== next) {
+            submenu.style.display = "none";
+            submenu.parentElement.classList.remove("open");
+          }
+        });
+      }
+    };
+  
+    var accordion = new Accordion(document.getElementById("accordion"), false);
+  });
+
   function adjustServiceLayout() {
     let deviceWidth = window.innerWidth;
     let serviceImg = document.querySelectorAll(".service-img");
