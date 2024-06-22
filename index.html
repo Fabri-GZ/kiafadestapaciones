@@ -3,16 +3,16 @@
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Destapaciones Kiafa</title>
+      <title>Kiafa Destapaciones</title>
       <meta name="description" content="Somos Kiafa Destapaciones, un servicio de destapaciones con casi 15 años de experiencia en CABA y ciertas partes de GBA. Realizamos destapaciones y video inspecciones con profesionalismo. ¡Contáctanos para solucionar tus problemas de cañerías de manera eficiente y confiable!">
       <meta name="keywords" content="destapaciones, plomería, destapaciones de cañerías,destapación de cañerías, destapación de cloacas, destapaciones de urgencia, destapaciones con máquina, servicio de destapaciones, destapaciones pluviales, destapar cañerías, servicios de plomería, limpieza de cañerías, cañerías obstruidas, destapar desagües, video inspecciones, Kiafa Destapaciones, Destapaciones Kiafa">
       <meta name="robots" content="index, follow">
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-      <link rel="preload" href=".//BG.webp" as="image">
       <link rel="stylesheet" href="style.css">
-      <link rel="preconnect" href="https://ka-f.fontawesome.com">
+      <link rel="preload" href=".//BG.webp" as="image">
       <link rel="icon" href=".//logo.webp" type="image/webp"> 
       <link rel="stylesheet" href="./aos.css">
+      <link rel="preconnect" href="https://ka-f.fontawesome.com">
   </head>
   <body>
     <div class="whatsapp-icon-container">
@@ -20,7 +20,7 @@
     </div>
 
       <nav class="navbar navbar-expand-lg" id="navbar">
-          <div class="container-fluid header">
+          <div class="container-fluid header" id="header">
             <a class="navbar-brand" href="#">
               <img src="./logo.webp" alt="Kiafadestapaciones logo" class="kiafa-logo">
             </a>
@@ -111,7 +111,7 @@
                 <i class="fa-solid fa-circle-check fa-fw TXT-IMG"></i>
             </div>
             <div class="content-container">
-                <p><b>Gracias a nuestros casi 15 años de experiencia y nuestro material de trabajo podemos desobstruir cañerías con raíces, grasa, papel entre muchas más cosas.</b></p>
+                <p><b>Gracias a nuestros 15 años de experiencia y nuestro material de trabajo podemos desobstruir cañerías con raíces, grasa, papel entre muchas más cosas.</b></p>
             </div>
         </div>
         </div>
@@ -123,8 +123,8 @@
       <h2 class="title services-title" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500" data-aos-once="true">Servicios</h2>
       
       <div class="row service-card" id="services-1">
-        <div class="col-4 service-img img-1">
-          <img src="./service-1.webp" alt="" class="img-fluid" style="height: 100%;">
+        <div class="col-4 service-img">
+          <img src="./service-1.webp" alt="" class="img-fluid img-1">
         </div>
         <div class="col-6 service-container">
           <p class="service-header header-1"> <b>Servicios que realizamos </b><br>
@@ -139,21 +139,19 @@
         <div class="col-6 service-container">
           <p class="service-header"> <b>Nuestros clientes</b><br>
           <p class="service-text">Destapación de columnas, pluviales, ramales internos y videoinspecciones en hogares, edificios, empresas, oficinas, fábricas, establecimientos y más.</p>
-          <button type="button" class="btn btn-outline-primary" onclick="scrollToContact()">Contacto</button>
         </div>
-        <div class="col-4 service-img img-2">
-          <img src="./Service-2.webp" alt="" class="img-fluid" style="height: 100%;">
+        <div class="col-4 service-img">
+          <img src="./Service-2.webp" alt="" class="img-fluid img-2">
         </div>
       </div>
 
       <div class="row service-card" id="services-3">
-        <div class="col-4 service-img img-3">
-          <img src="./Service-3.webp" alt="" class="img-fluid" style="height: 100%;">
+        <div class="col-4 service-img">
+          <img src="./Service-3.webp" alt="" class="img-fluid img-3">
         </div>
         <div class="col-6 service-container">
           <p class="service-header"> <b>Videoinspecciones</b><br>
           <p class="service-text">Brindamos servicios de videoinspección que permiten evaluar el estado real del interior de las cañerías mediante una serie de videos enviados por mail.</p>
-          <button type="button" class="btn btn-outline-primary" onclick="scrollToContact()">Contacto</button>
         </div>
         <div class="col-2 blank-space"></div>
       </div>
@@ -165,11 +163,14 @@
           <p class="service-text">Se trata de un equipo que permite enviar un cable de fibra óptica con una camára capaz de captar nítidamente (gracias a su linterna) el estado de la cañería mediante un video como el mostrado aquí, dejandonos ver la presencia de obstrucciones, roturas, etc..</p>
           <button type="button" class="btn btn-outline-primary" onclick="scrollToContact()">Contacto</button>
         </div>
-        <div class="col-4 service-img img-4">
-          <div class="video-container">
-          <img src="./Contact-1.webp" alt="" class="img-fluid placeholder" style="height: 100%;">
+        <div class="video-background"></div>
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/omWMj0IR1lM" class="img-fluid services-4" id="video-frame" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="col-4 service-img">
+          <div class="img-container">
+          <img src="./Contact-1.webp" alt="" class="img-fluid placeholder img-4">
           <div class="play-bttn" id="play-bttn">&#9658;</div>
-          <video src="./Services-4.mp4" class="img-fluid services-4" style="width: 100%;"></video>
           </div>
         </div>
       </div>
@@ -251,6 +252,7 @@
     <p>Copyright © 2024 Kiafadestapaciones | <b>Diseño Web</b> Fabrizio Guzmán </p>
   </footer>
     
+  <script src="./script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
@@ -265,179 +267,8 @@
     <script>
       AOS.init();
     </script>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const hamburger = document.querySelector(".hamburger");
-      const navbarNavDropdown = document.querySelector(".navbar-nav");
-      const navLinks = document.querySelectorAll(".drop-link");
-
-      function toggleHamburger() {
-        hamburger.classList.toggle("is-active");
-        navbarNavDropdown.classList.toggle("show");
-      }
-
-      hamburger.addEventListener("click", toggleHamburger);
-
-      navLinks.forEach(function(link) {
-        link.addEventListener("click", function() {
-          if (hamburger.classList.contains("is-active")) {
-            toggleHamburger();
-          }
-        });
-      });
-    });
-  </script>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-    let header = document.querySelector("#navbar");
-    let dropdownItem = document.querySelectorAll(".dropdown-item");
-    function BgColor(color) {
-        dropdownItem.forEach(item => {
-            item.style.background = color;
-        });
-    }
-    function NewBgColor() {
-        if (window.innerWidth < 1022) {
-            BgColor("#10175c");
-        } else {
-            if (window.scrollY > 550) {
-                BgColor("#20222B");
-            } else {
-                BgColor("#03072A");
-            }
-        }
-    }
-    window.addEventListener("scroll", function () {
-        if (window.innerWidth >= 1022) {
-            if (window.scrollY > 550) {
-                header.style.backgroundColor = "#20222B";
-                header.style.height = "75px";
-                BgColor("#20222B");
-            } else {
-                header.style.backgroundColor = "#03072A";
-                header.style.height = "70px";
-                BgColor("#03072A");
-            }
-        }
-    });
-    window.addEventListener("resize", function () {
-        NewBgColor();
-    });
-    NewBgColor();
-  });
-  </script>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      var navbarToggler = document.getElementById("navbar-toggler");
-      var navLinks = document.querySelectorAll(".drop-link");
-      var dropLinks = document.querySelectorAll(".dropdown-item");
-
-      navLinks.forEach(function (link) {
-        link.addEventListener("click", function () {
-          var bsCollapse = new bootstrap.Collapse(document.getElementById("navbarNavDropdown"), {
-            toggle: false
-          });
-          bsCollapse.hide();
-        });
-      });
-    });
-    </script>
-
     <script>
-  document.addEventListener("DOMContentLoaded", function () {
-        let links = document.querySelectorAll(".navbar ul li a");
-    
-        links.forEach(link => {
-          link.addEventListener("click", function (e) {
-            e.preventDefault();
-    
-            links.forEach(l => l.classList.remove("active"));
-    
-            this.classList.add("active");
-    
-            let targetId = this.getAttribute("href").substring(1);
-            let targetElement = document.getElementById(targetId);
-    
-            if (targetElement) {
-              targetElement.scrollIntoView({ behavior: "smooth" });
-            }
-          });
-        });
-    
-        window.addEventListener("scroll", function () {
-          let scrollPosition = window.scrollY;
-    
-          let closestSectionId = null;
-          let closestDistance = Infinity;
-    
-          links.forEach(link => {
-            let targetId = link.getAttribute("href").substring(1);
-            let targetElement = document.getElementById(targetId);
-    
-            if (targetElement) {
-              let offsetTop = targetElement.offsetTop;
-              let distance = Math.abs(scrollPosition - offsetTop);
-    
-              if (distance < closestDistance) {
-                closestDistance = distance;
-                closestSectionId = targetId;
-              }
-            }
-          });
-    
-          links.forEach(link => {
-            let targetId = link.getAttribute("href").substring(1);
-            if (targetId === closestSectionId) {
-              link.classList.add("active");
-            } else {
-              link.classList.remove("active");
-            }
-          });
-        });
-      });
-    </script>
-
-    <script>
-    document.addEventListener("DOMContentLoaded", function () {
-    var video = document.querySelector(".services-4");
-    var playButton = document.getElementById("play-bttn");
-    var placeholder = document.querySelector(".placeholder");
-
-      playButton.addEventListener("click", function () {
-        placeholder.style.display = "none";
-        video.style.display = "block"
-        
-        if (video.requestFullscreen) {
-          video.requestFullscreen();}
-
-        video.play();
-        });
-        function onFullScreenChange() {
-      if (document.fullscreenElement) {
-        video.controls = true
-      } else {
-        video.controls = false;
-        video.pause();
-        video.style.display = "none";
-        placeholder.style.display = "block"
-      }
-    }
-
-    document.addEventListener("fullscreenchange", onFullScreenChange);
-      })
-
-    function scrollToContact() {
-      document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
-    }
-
-    </script>
-
-  <script>
-    
-    $(function() {
+       $(function() {
       var Accordion = function(el, multiple) {
         this.el = el || {};
         this.multiple = multiple || false;
@@ -461,40 +292,7 @@
     
       var accordion = new Accordion($("#accordion"), false);
     });
-    
-  </script>
-
-    <script>
-  function adjustServiceLayout() {
-    let deviceWidth = window.innerWidth;
-    let serviceImg = document.querySelectorAll(".service-img");
-    let serviceContainer = document.querySelectorAll(".service-container");
-
-    if (deviceWidth < 800) {
-      serviceImg.forEach(function(image) {
-        image.classList.remove("col-4");
-        image.classList.add("col-12");
-      });
-
-      serviceContainer.forEach(function(container) {
-        container.classList.remove("col-6");
-        container.classList.add("col-12");
-      });
-    } else {
-      serviceImg.forEach(function(image) {
-        image.classList.remove("col-12");
-        image.classList.add("col-4");
-      });
-
-      serviceContainer.forEach(function(container) {
-        container.classList.remove("col-12");
-        container.classList.add("col-6");
-      });
-    }
-  }
-  adjustServiceLayout();
-
-  window.addEventListener("resize", adjustServiceLayout);
+  
     </script>
   </body>
   </html>
