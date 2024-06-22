@@ -1,3 +1,4 @@
+
 *::before,
 *::after {
   box-sizing: border-box;
@@ -362,12 +363,20 @@ body.no-scroll {
     position: absolute;
     width: 100%;
     height: 745px;
-    background-image: linear-gradient(180deg,#01052ed9 40%,#2a2a2ab2 100%), url("./BG.webp");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
-  
+
+.gradient {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(180deg,#01052ed9 40%,#2a2a2ab2 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: 0;
+}
+
+
 .txt-bg {
     width: 100%;
     height: 60%;
