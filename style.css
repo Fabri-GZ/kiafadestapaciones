@@ -910,7 +910,7 @@ body.no-scroll {
     line-height: 1.7em;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 799px) {
     #services-1, #services-3 {
       flex-direction: column;
     }
