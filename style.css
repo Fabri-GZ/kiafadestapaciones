@@ -365,6 +365,14 @@ body.no-scroll {
     height: 745px;
 }
 
+.bg-img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .gradient {
   position: absolute;
   width: 100%;
@@ -395,6 +403,7 @@ body.no-scroll {
 }
   
 .leyend h1, .leyend h2 {
+    font-family:'Montserrat';
     font-size: 4vw;
     -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
